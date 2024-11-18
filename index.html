@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-3 shadow" style="width: 300px;">
+        <!-- Display -->
+        <input type="text" id="display" class="form-control mb-3 text-end" placeholder="0" disabled>
+        
+        <!-- Tabela de Botões -->
+        <table class="table table-borderless text-center">
+            <tr>
+                <td><button class="btn btn-primary" onclick="appendNumber('7')">7</button></td>
+                <td><button class="btn btn-primary" onclick="appendNumber('8')">8</button></td>
+                <td><button class="btn btn-primary" onclick="appendNumber('9')">9</button></td>
+                <td><button class="btn btn-warning" onclick="appendOperator('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn btn-primary" onclick="appendNumber('4')">4</button></td>
+                <td><button class="btn btn-primary" onclick="appendNumber('5')">5</button></td>
+                <td><button class="btn btn-primary" onclick="appendNumber('6')">6</button></td>
+                <td><button class="btn btn-warning" onclick="appendOperator('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn btn-primary" onclick="appendNumber('1')">1</button></td>
+                <td><button class="btn btn-primary" onclick="appendNumber('2')">2</button></td>
+                <td><button class="btn btn-primary" onclick="appendNumber('3')">3</button></td>
+                <td><button class="btn btn-warning" onclick="appendOperator('-')">-</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="btn btn-primary w-100" onclick="appendNumber('0')">0</button></td>
+                <td><button class="btn btn-secondary" onclick="clearDisplay()">C</button></td>
+                <td><button class="btn btn-warning" onclick="appendOperator('+')">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="4"><button class="btn btn-success w-100" onclick="calculate()">=</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
